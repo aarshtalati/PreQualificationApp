@@ -236,6 +236,7 @@
     <Content Include="Scripts\angular-ui\ui-bootstrap.min.js" />
     <Content Include="Scripts\angular.js" />
     <Content Include="Scripts\angular.min.js" />
+    <Content Include="Scripts\App\app.js" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
     <Content Include="Scripts\angular-sanitize.min.js.map" />
@@ -1017,7 +1018,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\App\" />
+    <Folder Include="Scripts\App\controllers\" />
+    <Folder Include="Scripts\App\directives\" />
+    <Folder Include="Scripts\App\factories\" />
+    <Folder Include="Scripts\App\services\" />
+    <Folder Include="Scripts\App\templates\" />
+    <Folder Include="Scripts\App\test\" />
+    <Folder Include="Scripts\App\views\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
