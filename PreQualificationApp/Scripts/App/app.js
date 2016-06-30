@@ -3,7 +3,7 @@
 var app = angular.module('app', [
 	// Angular modules 
 
-	'ng', 'ngRoute', 'ngSanitize', 'ngAnimate',
+	'ng', 'ngRoute', 'ngSanitize', 'ngAnimate', 
 
 	// Custom modules 
 
@@ -25,34 +25,30 @@ app.config(['$routeProvider',
 
 			// default url
 			.when(spaBaseUrl, {
-				templateUrl: rootUrl + '/Scripts/App/Views/Registration/Form.html',
-				controller: 'registrarController'
-			})
+					templateUrl: rootUrl + '/Scripts/App/Views/Registration/Form.html',
+					controller: 'registrarController'})
 
 			.when(spaBaseUrl + 'Register', {
-				templateUrl: rootUrl + '/Scripts/App/Views/Registration/Form.html',
-				controller: 'registrarController'
-			})
+					templateUrl: rootUrl + '/Scripts/App/Views/Registration/Form.html',
+					controller: 'registrarController'})
 
 			.when(spaBaseUrl + 'Support', {
-				templateUrl: rootUrl + '/Scripts/App/Views/Support/Support.html',
-				controller: 'customerRepController'
-			})
+					templateUrl: rootUrl + '/Scripts/App/Views/Support/Support.html',
+					controller: 'customerRepController'})
 
 			.when(spaBaseUrl + 'About', {
-				templateUrl: rootUrl + '/Scripts/App/Views/Support/About.html'
+					templateUrl: rootUrl + '/Scripts/App/Views/Support/About.html'
 			})
 
 			.when(spaBaseUrl + 'notFound', {
-				templateUrl: rootUrl + '/Scripts/App/Views/Error/NotFound.html'
-			})
+				templateUrl: rootUrl + '/Scripts/App/Views/Error/NotFound.html'})
 
 			// Invalid route
 			.otherwise({
-				redirectTo: spaBaseUrl + 'notFound'
-			});
+			redirectTo: spaBaseUrl + 'notFound'
+		});
 
-	}
+		}
 ]);
 
 app.value('$', $);

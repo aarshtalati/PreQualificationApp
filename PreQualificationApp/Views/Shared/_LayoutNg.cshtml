@@ -24,6 +24,10 @@
 	<!--Modernizr-->
 	@Scripts.Render("~/bundles/modernizr")
 
+	<!-- Material Design fonts -->
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/icon?family=Material+Icons">
+
 	<!--Bootstrap styles-->
 	@Styles.Render("~/Content/bootstrap")
 
@@ -91,6 +95,15 @@
 	@Scripts.Render("~/bundles/angular")
 	@Scripts.Render("~/bundles/angularui")
 	@Scripts.Render("~/bundles/app")
+
+	<script type="text/javascript">
+		$(function () {
+			if ($.material != null || $.material != undefined) {
+				$.material.init();
+			}
+		});
+	</script>
+
 	@RenderSection("scripts", required: false)
 </body>
 </html>

@@ -8,13 +8,17 @@
 	viewCr.$inject = ['$timeout'];
 
 	function viewCr($timeout) {
+		// Usage:
+		//     <view-cr></view-cr>
+		// Creates:
+		// 
 		var directive = {
 			scope: {
 				cr: '='
 			},
 			link: link,
 			templateUrl: rootUrl + 'Scripts/App/templates/Support/ViewCrTemplate.html',
-			restrict: 'A' // Adding new element might give cardiac arrest to heavenly IE --- never tried with Edge though. TODO
+			restrict: 'A'
 		};
 		return directive;
 
