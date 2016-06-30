@@ -242,11 +242,13 @@
     <Content Include="Scripts\App\controllers\headerController.js" />
     <Content Include="Scripts\App\controllers\Registration\registrarController.js" />
     <Content Include="Scripts\App\controllers\spaController.js" />
+    <Content Include="Scripts\App\controllers\Support\customerRepController.js" />
     <Content Include="Scripts\App\services\Registration\preQualifyService.js" />
     <Content Include="Scripts\App\services\Support\customerRepService.js" />
     <Content Include="Scripts\App\Views\Error\NotFound.html" />
     <Content Include="Scripts\App\Views\Registration\Form.html" />
     <Content Include="Scripts\App\Views\Support\About.html" />
+    <Content Include="Scripts\App\Views\Support\Support.html" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
     <Content Include="Scripts\angular-sanitize.min.js.map" />
@@ -1029,7 +1031,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\App\controllers\Support\" />
     <Folder Include="Scripts\App\directives\" />
     <Folder Include="Scripts\App\factories\" />
     <Folder Include="Scripts\App\templates\" />
