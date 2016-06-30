@@ -1,0 +1,213 @@
+﻿<style type="text/css">
+	.css-form input.ng-invalid.ng-touched {
+		background-color: #FA787E;
+	}
+
+	.css-form input.ng-valid.ng-touched {
+		background-color: #78FA89;
+	}
+</style>
+
+
+<!--div#registrationFormContainer.col-md-12-->
+<div id="registrationFormContainer" class="col-md-12">
+	<div class="col-md-12">
+		<div class="col-md-10">
+			<h3 class="page-header">
+				Pre-Qualify
+			</h3>
+		</div>
+	</div>
+
+	<button class="btn btn-info" data-ng-click="loadTestData()">Load Test Data</button>
+
+	<div>
+		<form class="form-horizontal" name="fmrKabbagePreQual" method="post" data-ng-submit="checkPreQualify()">
+
+			<div class="form-group"
+				 data-ng-class="{'has-error': showValidationErrors && fmrKabbagePreQual.firstName.$invalid && fmrKabbagePreQual.firstName.$dirty}">
+				<label for="firstName"
+					   class="control-label col-xs-2">
+					First Name
+				</label>
+				<div class="col-xs-10">
+					<input id="firstName"
+						   type="text"
+						   name="firstName"
+						   class="form-control input-sm"
+						   data-ng-model="prequal.firstName"
+						   placeholder="First Name"
+						   data-ng-required="true" />
+				</div>
+			</div>
+
+			<div class="form-group"
+				 data-ng-class="{'has-error': showValidationErrors && fmrKabbagePreQual.lastName.$invalid && fmrKabbagePreQual.lastName.$dirty}">
+				<label for="lastName"
+					   class="control-label col-xs-2">
+					Last Name
+				</label>
+				<div class="col-xs-10">
+					<input id="lastName"
+						   type="text"
+						   name="lastName"
+						   class="form-control input-sm"
+						   data-ng-model="prequal.lastName"
+						   placeholder="Last Name"
+						   data-ng-required="true" />
+				</div>
+			</div>
+
+			<div class="form-group"
+				 data-ng-class="{'has-error': showValidationErrors && fmrKabbageprequal.emailAddress.$invalid && fmrKabbageprequal.emailAddress.$dirty}">
+				<label for="emailAddress"
+					   class="control-label col-xs-2">
+					E-mail
+				</label>
+				<div class="col-xs-10">
+					<input id="email"
+						   type="emailemailAddress"
+						   name="emailAddress"
+						   class="form-control input-sm"
+						   data-ng-model="prequal.emailAddress"
+						   placeholder="E-mail"
+						   data-ng-required="true" />
+				</div>
+			</div>
+
+			<div class="form-group"
+				 data-ng-class="{'has-error': showValidationErrors && fmrKabbagePreQual.businessName.$invalid && fmrKabbagePreQual.businessName.$dirty}">
+				<label for="businessName"
+					   class="control-label col-xs-2">
+					Business
+				</label>
+				<div class="col-xs-10">
+					<input id="businessName"
+						   type="text"
+						   name="businessName"
+						   class="form-control input-sm"
+						   data-ng-model="prequal.businessName"
+						   placeholder="Business Name"
+						   data-ng-required="true" />
+				</div>
+			</div>
+
+
+			<div class="form-group"
+				 data-ng-class="{'has-error': showValidationErrors && fmrKabbagePreQual.phoneNumber.$invalid && fmrKabbagePreQual.phoneNumber.$dirty}">
+				<label for="phoneNumber"
+					   class="control-label col-xs-2">
+					Telephone
+				</label>
+				<div class="col-xs-10">
+					<input id="phoneNumber"
+						   type="tel"
+						   name="phoneNumber"
+						   class="form-control input-sm"
+						   data-ng-model="prequal.phoneNumber"
+						   placeholder="Telephone"
+						   data-ng-required="true" />
+				</div>
+			</div>
+
+			<div class="form-group"
+				 data-ng-class="{'has-error': showValidationErrors && fmrKabbagePreQual.yearStarted.$invalid && fmrKabbagePreQual.yearStarted.$dirty}">
+				<label for="yearStarted"
+					   class="control-label col-xs-2">
+					Year Started
+				</label>
+				<div class="col-xs-10">
+					<input id="yearStarted"
+						   type="number"
+						   name="yearStarted"
+						   class="form-control input-sm"
+						   data-ng-model="prequal.yearStarted"
+						   placeholder="Year Started"
+						   data-ng-required="true" />
+				</div>
+			</div>
+
+			<div class="form-group"
+				 data-ng-class="{'has-error': showValidationErrors && fmrKabbagePreQual.estimatedFICO.$invalid && fmrKabbagePreQual.estimatedFICO.$dirty}">
+				<label for="estimatedFICO"
+					   class="control-label col-xs-2">
+					Estimated FICO
+				</label>
+				<div class="col-xs-10">
+					<input id="estimatedFICO"
+						   type="number"
+						   name="estimatedFICO"
+						   class="form-control input-sm"
+						   data-ng-model="prequal.estimatedFICO"
+						   placeholder="Estimated FICO"
+						   data-ng-required="true" />
+				</div>
+			</div>
+
+			<div class="form-group"
+				 data-ng-class="{'has-error': showValidationErrors && fmrKabbagePreQual.estimatedAnnualRevenue.$invalid && fmrKabbagePreQual.estimatedAnnualRevenue.$dirty}">
+				<label for="estimatedAnnualRevenue"
+					   class="control-label col-xs-2">
+					Estimate Annual Revenue
+				</label>
+				<div class="col-xs-10">
+					<input id="estimatedAnnualRevenue"
+						   type="number"
+						   name="estimatedAnnualRevenue"
+						   class="form-control input-sm"
+						   data-ng-model="prequal.estimatedAnnualRevenue"
+						   placeholder="Estimated Annual Revenue"
+						   data-ng-required="true" />
+				</div>
+			</div>
+
+			<div class="form-group"
+				 data-ng-class="{'has-error': showValidationErrors && fmrKabbagePreQual.grossPercentageFromCards.$invalid && fmrKabbagePreQual.grossPercentageFromCards.$dirty}">
+				<label for="grossPercentageFromCards"
+					   class="control-label col-xs-2">
+					Gross Percentage From Cards
+				</label>
+				<div class="col-xs-10">
+					<input id="grossPercentageFromCards"
+						   type="number"
+						   name="grossPercentageFromCards"
+						   class="form-control input-sm"
+						   data-ng-model="prequal.grossPercentageFromCards"
+						   placeholder="Goss Percentage FromCards"
+						   data-ng-required="true" />
+				</div>
+			</div>
+
+			<div class="form-group"
+				 data-ng-class="{'has-error': showValidationErrors && fmrKabbagePreQual.typeOfBusiness.$invalid && fmrKabbagePreQual.typeOfBusiness.$dirty}">
+				<label for="typeOfBusiness"
+					   class="control-label col-xs-2">
+					Type Of Business
+				</label>
+				<div class="col-xs-10">
+					<input id="typeOfBusiness"
+						   type="text"
+						   name="typeOfBusiness"
+						   class="form-control input-sm"
+						   data-ng-model="prequal.typeOfBusiness"
+						   placeholder="Type Of Business"
+						   data-ng-required="true" />
+				</div>
+			</div>
+
+			<div>
+				<button class="btn btn-link" data-ng-click="reset(fmrKabbagePreQual)" data-ng-disabled="isUnchanged(user)">Reset</button>
+				<input type="submit" class="btn btn-primary" data-ng-disabled="fmrKabbagePreQual.$invalid || isUnchanged(user)" data-ng-click="checkData()">
+				<label>{{msg}}</label>
+			</div>
+
+		</form>
+	</div>
+</div>
+<script>
+	$(function () {
+		$("input[type='number']").keyup(function () {
+			this.value = this.value.replace(/\D/g, '');
+		});
+	});
+</script>
