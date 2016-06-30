@@ -5,9 +5,9 @@
 		.module('app')
 		.controller('customerRepController', customerRepController);
 
-	customerRepController.$inject = ['$scope', 'customerRepService'];
+	customerRepController.$inject = ['$scope', 'customerRepService', 'toastr'];
 
-	function customerRepController($scope, service) {
+	function customerRepController($scope, service, toastr) {
 
 		$scope.title = 'customerRepController';
 
@@ -45,26 +45,20 @@
 				});
 				$scope.emptyTableMessage = ($scope.custReps.length === 0);
 				$scope.loadingCustReps = false;
+				toastr.success('Customer Representatives loaded.', 'Ready');
 			}).error(function (data, status) {
 				console.log('Error getting customer representatives', status);
 				console.log(data);
 				$scope.custReps = [];
 				$scope.loadingCustReps = false;
+				toastr.error('Customer Representatives can not be loaded.', 'Error');
 			});
 		};
+
 
 		$scope.custRepTableSort = function (p) {
 			$scope.predicate = p;
 			$scope.reverse = !$scope.reverse;
-		};
-
-		$scope.toggleFilterVisibility = function () {
-			$scope.showFilterRow = !($scope.showFilterRow);
-			$scope.clearFilter();
-		};
-
-		$scope.clearFilter = function () {
-			$scope.search = {};
 		};
 
 		$scope.viewCusRep = function (_id) {
@@ -78,6 +72,20 @@
 			}
 			$scope.crDetail = cr;
 		};
+
+		$scope.toggleFilterVisibility = function () {
+			$scope.showFilterRow = !($scope.showFilterRow);
+			$scope.clearFilter();
+		};
+
+		$scope.clearFilter = function () {
+			$scope.search = {};
+		};
+
+		//$scope.$watch('custReps.length', function () {
+		//	if ($scope.custReps != undefined && $scope.custReps != null && $scope.custReps.length != undefined)
+		//		$scope.emptyTableMessage = $scope.custReps.length == 0 && (!$scope.loadingcustReps);
+		//});
 
 		$scope.$watch('search.Id', function () {
 			if ($scope.search.Id === undefined || $scope.search.Id === null) {

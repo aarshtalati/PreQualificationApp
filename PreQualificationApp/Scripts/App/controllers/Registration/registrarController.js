@@ -7,10 +7,11 @@
 			'$scope'
 			, '$location'
 			, 'preQualifyService'
+			, 'toastr'
 			, registrarController
 		]);
 
-	function registrarController($scope, $location, service) {
+	function registrarController($scope, $location, service, toastr) {
 		$scope.title = 'registrarController';
 
 		$scope.master = {};
@@ -97,6 +98,7 @@
 			service.CustomerPreQualificaionCheck($scope.prequal)
 				.success(function (data, status, headers, config) {
 					$scope.checkPreQualifyResponse = data;
+					toastr.success('The server returned something', 'Yay!');
 				}).error(function (data, status, headers, config) {
 
 					var reply = getRandomInt(1, 2)
@@ -115,6 +117,8 @@
 					console.log('------------');
 					console.log(config);
 					console.log('------------');
+					toastr.error('Check console for more logs.', 'Oh well, it is ' + status);
+					toastr.info('Using fake object.', 'Faking it');
 				});
 		}
 
