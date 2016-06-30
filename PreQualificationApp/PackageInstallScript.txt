@@ -1,0 +1,8 @@
+﻿Install-Package bootstrap 
+Install-Package AngularJS -Version 1.2.25
+Install-Package Modernizr -Version 2.8.3
+Install-Package Angular.UI -Version 0.4 
+Install-Package html5shiv 
+Install-Package Angular.UI.Bootstrap
+Install-Package Font.Awesome
+Install-Package angular-toastr
