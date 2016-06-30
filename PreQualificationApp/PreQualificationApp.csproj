@@ -243,8 +243,10 @@
     <Content Include="Scripts\App\controllers\Registration\registrarController.js" />
     <Content Include="Scripts\App\controllers\spaController.js" />
     <Content Include="Scripts\App\controllers\Support\customerRepController.js" />
+    <Content Include="Scripts\App\directives\viewCr.js" />
     <Content Include="Scripts\App\services\Registration\preQualifyService.js" />
     <Content Include="Scripts\App\services\Support\customerRepService.js" />
+    <Content Include="Scripts\App\templates\Support\ViewCrTemplate.html" />
     <Content Include="Scripts\App\Views\Error\NotFound.html" />
     <Content Include="Scripts\App\Views\Registration\Form.html" />
     <Content Include="Scripts\App\Views\Support\About.html" />
@@ -1031,9 +1033,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Scripts\App\directives\" />
     <Folder Include="Scripts\App\factories\" />
-    <Folder Include="Scripts\App\templates\" />
     <Folder Include="Scripts\App\test\" />
   </ItemGroup>
   <ItemGroup>

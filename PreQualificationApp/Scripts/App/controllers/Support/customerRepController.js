@@ -53,7 +53,6 @@
 			});
 		};
 
-
 		$scope.custRepTableSort = function (p) {
 			$scope.predicate = p;
 			$scope.reverse = !$scope.reverse;
@@ -66,6 +65,18 @@
 
 		$scope.clearFilter = function () {
 			$scope.search = {};
+		};
+
+		$scope.viewCusRep = function (_id) {
+			var cr = {};
+			var N = $scope.custReps.length;
+			for (var i = 0; i < N; i++) {
+				if ($scope.custReps[i].Id === _id) {
+					cr = $scope.custReps[i];
+					break;
+				}
+			}
+			$scope.crDetail = cr;
 		};
 
 		$scope.$watch('search.Id', function () {
