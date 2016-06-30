@@ -241,6 +241,8 @@
     <Content Include="Scripts\App\app.js" />
     <Content Include="Scripts\App\controllers\headerController.js" />
     <Content Include="Scripts\App\controllers\spaController.js" />
+    <Content Include="Scripts\App\services\Registration\preQualifyService.js" />
+    <Content Include="Scripts\App\services\Support\customerRepService.js" />
     <Content Include="Scripts\errors.json" />
     <Content Include="Scripts\angular-touch.min.js.map" />
     <Content Include="Scripts\angular-sanitize.min.js.map" />
@@ -1026,10 +1028,11 @@
     <Folder Include="Scripts\App\controllers\Support\" />
     <Folder Include="Scripts\App\directives\" />
     <Folder Include="Scripts\App\factories\" />
-    <Folder Include="Scripts\App\services\" />
     <Folder Include="Scripts\App\templates\" />
     <Folder Include="Scripts\App\test\" />
-    <Folder Include="Scripts\App\views\" />
+    <Folder Include="Scripts\App\Views\Error\" />
+    <Folder Include="Scripts\App\Views\Registration\" />
+    <Folder Include="Scripts\App\Views\Support\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
